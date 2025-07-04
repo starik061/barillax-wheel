@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "strict": false // удалить для включения линтинга ts
+  },
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    },
+    {
+      "path": "./tsconfig.app.json"
+    }
+  ]
+}
