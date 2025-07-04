@@ -1,5 +1,7 @@
 <template>
   <div class="layout">
+    <TopMenu />
+
     <main class="layout__content">
       <RouterView v-slot="{ Component }">
         <Transition name="fade" mode="out-in">
@@ -7,11 +9,15 @@
         </Transition>
       </RouterView>
     </main>
+
+    <BottomMenu />
   </div>
 </template>
 
 <script setup>
 import { RouterView } from 'vue-router'
+import TopMenu from '@/components/TopMenu.vue'
+import BottomMenu from '@/components/BottomMenu.vue'
 </script>
 
 <style scoped lang="scss">

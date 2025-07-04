@@ -1,7 +1,9 @@
 <template>
-  <div>WheelView</div>
+  <Wheel />
 </template>
 
-<script setup></script>
+<script setup>
+import Wheel from '@/components/Wheel.vue'
+</script>
 
 <style lang="scss" scoped></style>
