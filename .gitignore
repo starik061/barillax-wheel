@@ -29,3 +29,7 @@ coverage
 
 *.tsbuildinfo
 .qodo
+
+# Env files
+.env
+.env.* 

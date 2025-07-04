@@ -1,7 +1,8 @@
 {
-  "name": "orders-project",
+  "name": "barillax-wheel",
   "version": "0.0.0",
   "private": true,
+  "homepage": "https://starik061.github.io/barillax-wheel/",
   "type": "module",
   "scripts": {
     "dev": "vite",
