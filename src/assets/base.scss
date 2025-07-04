@@ -1,5 +1,20 @@
-/* color palette from <https://github.com/vuejs/theme> */
 :root {
+  --color-background: #16202f;
+  --color-element-background: #2e3744;
+  --color-element-background-2: #454d59;
+  --color-element-background-rose: #e43659;
+  --color-element-border: #555c67;
+  --color-element-lemongreen: #affc41;
+  --color-text: #ffffff;
+  --color-main-blue: #0070f3;
+  --color-main-orange: #f7b23b;
+
+  // toast varibles
+  --toastify-toast-width: 300px;
+  --toastify-color-dark: #16202f;
+  --toastify-toast-min-height: 32px;
+  --toastify-toast-max-height: 74px;
+  --toastify-font-family: 'Styrene A', sans-serif;
 }
 
 *,
@@ -7,23 +22,48 @@
 *::after {
   box-sizing: border-box;
   margin: 0;
+  font-weight: normal;
+}
+
+/* Метод 1: Предотвращение эффекта "отскока" при скролле с помощью CSS */
+html {
+  height: 100%;
+  position: fixed;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  overflow: auto;
+  position: fixed;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
 }
 
 html {
-  scroll-behavior: smooth;
+  overflow-y: scroll; // Нужно чтоб всегда была полоса прокрутки. Потомуц что если ее нет и открывается аккордеон, и прокрутка появляется, то контент сдвигается влево
+  overflow-x: hidden;
 }
 
 body {
   min-height: 100vh;
-  position: relative;
-  /* font-family: "TildaSans", Arial, sans-serif;
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 1.55;
-  color: rgb(0, 0, 0); */
+  font-family: 'Nekst', Arial, Helvetica, sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-background);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  color: var(--color-text);
+  line-height: normal;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-text);
 }
 
 ul {
@@ -32,42 +72,37 @@ ul {
   padding: 0;
 }
 
-ol {
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
 button {
-  background-color: transparent;
   border: none;
-  font-family: inherit;
-}
-
-select {
+  background-color: transparent;
   cursor: pointer;
+  transition:
+    transform 0.1s ease,
+    box-shadow 0.1s ease;
 }
 
-.main-container {
-  width: 100%;
-  /* max-width: 1200px; */
-  margin: 0 auto;
-  padding: 0 20px;
+button:active,
+.btn-style:active {
+  transform: scale(0.98);
+  box-shadow: inset 0 6px 10px rgba(0, 0, 0, 0.5);
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
+button:disabled:active {
+  transform: scale(1);
+  box-shadow: none;
+}
 
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+/* Убирает подсветку элемента при тапе на него */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: inherit;
+  background-color: inherit;
 }

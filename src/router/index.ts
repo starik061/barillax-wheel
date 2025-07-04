@@ -1,10 +1,24 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import First from '@/components/First.vue'
+import AppLayout from '@/layouts/AppLayout.vue'
+import WheelView from '@/views/WheelView.vue'
+import EarnView from '@/views/EarnView.vue'
+
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: First // создадим этот файл позже
+    component: AppLayout,
+    children: [
+      {
+        path: '',
+        name: 'WheelView',
+        component: WheelView
+      },
+      {
+        path: '/earn',
+        name: 'EarnView',
+        component: EarnView
+      }
+    ]
   }
 ]
 

@@ -1,5 +1,5 @@
 <template>
-  <RouterView />
+  <div>WheelView</div>
 </template>
 
 <script setup></script>

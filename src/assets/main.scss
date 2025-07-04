@@ -1,2 +1,12 @@
-@use './base' as *;
+@use './base.scss';
 @import 'normalize.css';
+
+.main-container {
+  position: relative;
+  width: 100%;
+  min-width: 300px;
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 0 24px;
+  min-height: 100vh;
+}

@@ -1,5 +1,5 @@
 <template>
-  <RouterView />
+  <div>EarnView</div>
 </template>
 
 <script setup></script>
