@@ -36,7 +36,11 @@ export default defineConfigWithVueTs(
           }
         }
       ],
-      'vue/multi-word-component-names': 'off'
+      'vue/multi-word-component-names': 'off',
+
+      // 👇 Добавь это, чтобы отключить требование дефисов
+      'vue/attribute-hyphenation': 'off',
+      'vue/custom-event-name-casing': 'off'
     }
   }
 )
