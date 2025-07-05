@@ -3,7 +3,7 @@
     <!-- type: image -->
     <FortuneWheel
       ref="wheelEl"
-      style="width: 500px; max-width: 100%"
+      style="width: 250px; max-width: 80%; margin: 0 auto"
       type="image"
       :useWeight="true"
       :prizeId="prizeId"
@@ -16,7 +16,7 @@
         <img :src="wheelImg" style="width: 100%" />
       </template>
       <template #button>
-        <img :src="buttonImg" style="width: 510px" />
+        <img :src="buttonImg" style="width: 100%" />
       </template>
 
       <template #button-action>

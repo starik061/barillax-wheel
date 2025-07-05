@@ -1,13 +1,23 @@
 <template>
   <nav>
-    <ul>
-      <li>Лого</li>
-      <li>Счет</li>
-      <li>Валлет</li>
+    <p>Лого</p>
+    <ul class="top-menu-list">
+      <li>20ton</li>
+      <li>
+        <IconWallet />
+      </li>
     </ul>
   </nav>
 </template>
 
-<script setup></script>
+<script setup>
+import IconWallet from '@/components/icons/IconWallet.vue'
+</script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.top-menu-list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+</style>
