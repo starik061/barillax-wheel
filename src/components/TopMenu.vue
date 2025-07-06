@@ -5,6 +5,10 @@
       <li>20ton</li>
       <li>
         <IconWallet />
+        <TonConnectButton />
+        <div v-if="address">
+          <p>Вы подключены как: {{ address }}</p>
+        </div>
       </li>
     </ul>
   </nav>
@@ -12,6 +16,11 @@
 
 <script setup>
 import IconWallet from '@/components/icons/IconWallet.vue'
+import { TonConnectButton } from 'ton-ui-vue'
+
+import { useTonAddress } from 'ton-ui-vue'
+
+const address = useTonAddress()
 </script>
 
 <style lang="scss" scoped>
